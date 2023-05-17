@@ -33,8 +33,8 @@ function createCell(size) {
   const cell = document.createElement("div");
   cell.classList.toggle("cell");
   let sizing = (1 / size) * 100;
-  cell.style.width = `${sizing}vw`;
-  cell.style.height = `${sizing}vw`;
+  cell.style.width = `${sizing}vmin`;
+  cell.style.height = `${sizing}vmin`;
 
   return cell;
 }

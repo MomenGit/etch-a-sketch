@@ -14,6 +14,16 @@ body {
 header {
   display: flex;
   justify-content: space-around;
+  align-items: center;
+}
+#creator-btn {
+  height: 32px;
+  background-color: white;
+  border: 3px solid black;
+  border-radius: 6px;
+  font-weight: bold;
+  padding: 4px 16px;
+  text-align: center;
 }
 #grid {
   display: flex;
@@ -26,6 +36,10 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-shrink: 1;
 }
 .cell {
+  border: 1px solid gray;
+  flex-grow: 1;
+  flex-shrink: 1;
 }
