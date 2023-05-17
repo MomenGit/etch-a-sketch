@@ -12,25 +12,27 @@ body {
 }
 body {
   display: flex;
-  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
   padding-bottom: 8px;
+  flex-wrap: wrap;
 }
 header {
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  padding: 8px;
-  width: 100vw;
+  padding: 16px;
+  gap: 32px;
 }
 h1 {
   margin: 0px;
 }
 #btns-container {
   display: flex;
+  flex-direction: column;
   justify-content: space-evenly;
-  align-items: center;
   gap: 16px;
 }
 button {
