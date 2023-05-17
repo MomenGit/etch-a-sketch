@@ -1,6 +1,7 @@
 const creatorBtn = document.getElementById("creator-btn");
 const normalModeBtn = document.getElementById("normal-mode-btn");
 const randomColorBtn = document.getElementById("random-mode-btn");
+const eraserBtn = document.getElementById("eraser-btn");
 const showBordersBtn = document.getElementById("show-borders-btn");
 let mousePressed = 0;
 let mode = 0;
@@ -11,6 +12,9 @@ normalModeBtn.addEventListener("click", (e) => {
 });
 randomColorBtn.addEventListener("click", () => {
   mode = 1;
+});
+eraserBtn.addEventListener("click", () => {
+  mode = 2;
 });
 showBordersBtn.addEventListener("click", () => {
   document.querySelectorAll(".cell").forEach((e) => {
@@ -67,11 +71,20 @@ function createCell(size) {
   return cell;
 }
 function setCellColor(cell) {
-  if (mode) {
-    cell.style.backgroundColor = `rgb(${Math.floor(
-      Math.random() * 255
-    )},${Math.floor(Math.random() * 255)},${Math.floor(Math.random() * 255)})`;
-  } else {
-    cell.style.backgroundColor = "black";
+  switch (mode) {
+    case 0:
+      cell.style.backgroundColor = "black";
+      break;
+    case 1:
+      cell.style.backgroundColor = `rgb(${Math.floor(
+        Math.random() * 255
+      )},${Math.floor(Math.random() * 255)},${Math.floor(
+        Math.random() * 255
+      )})`;
+      break;
+    case 2:
+      cell.style.backgroundColor = "";
+    default:
+      break;
   }
 }
