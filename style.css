@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 * {
   font-family: Roboto, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
 }
 html,
 body {
@@ -8,5 +9,23 @@ body {
   padding: 0;
   height: 100vh;
   width: 100vw;
-  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+}
+#grid {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cell {
 }
